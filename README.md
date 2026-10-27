@@ -4,7 +4,7 @@ Public, recruiter-friendly overview of my **self-hosted infrastructure** — how
 
 > No IPs, tokens, firewall rules or internal ports. Architecture only.
 
-**Full narrative & interactive map:** [portfolio.odev.es/infrastructure](https://portfolio.odev.es/infrastructure)
+**Full narrative & interactive map:** [portfolio.odev.es/lab](https://portfolio.odev.es/lab)
 
 ---
 
@@ -51,16 +51,19 @@ flowchart TB
 
 ---
 
-## Public services (*.odev.es)
+## Public services
 
 | Domain | Type |
 |--------|------|
-| [portfolio.odev.es](https://portfolio.odev.es) | Personal portfolio |
-| [odevstudio.odev.es](https://odevstudio.odev.es) | Agency |
+| [odev.es](https://odev.es) | Web studio site (WordPress, custom theme) |
+| [odev.es/oscar](https://odev.es/oscar) | Link page (Next.js) |
+| [portfolio.odev.es](https://portfolio.odev.es) | Personal portfolio (PHP) |
+| [cercar.es](https://cercar.es) | Web app (TypeScript, PostgreSQL) |
+| [dunia-lobera.odev.es](https://dunia-lobera.odev.es) | Client website (WordPress) |
 | [nemoland.odev.es](https://nemoland.odev.es) | Community / games hub |
 | [jellyfin.odev.es](https://jellyfin.odev.es) | Media server |
-| [topsuite.odev.es](https://topsuite.odev.es) | SaaS-style product |
-| [cercar.odev.es](https://cercar.odev.es) | Web app |
+
+Each web runs in its own containers; path-based routing on odev.es (WordPress site + Next.js link page) is done in the reverse proxy.
 
 Internal services (Immich, Nextcloud, Portainer, etc.) stay off the public internet.
 
@@ -70,7 +73,7 @@ Internal services (Immich, Nextcloud, Portainer, etc.) stay off the public inter
 
 | Tool | Role |
 |------|------|
-| **Odev Hub** | Dashboard · links · health |
+| **Odev Hub** | Dashboard · links · health · business CRM |
 | **OdevDoctor** | Daily ops via Telegram |
 | **Uptime Kuma / Beszel** | Monitoring |
 | **Portainer** | Emergency Docker UI only |
@@ -83,7 +86,7 @@ Internal services (Immich, Nextcloud, Portainer, etc.) stay off the public inter
 - **Proxy:** Nginx Proxy Manager
 - **Edge:** Cloudflare Tunnel
 - **Remote:** Tailscale
-- **Languages:** PHP, JavaScript, Python
+- **Languages:** PHP, JavaScript, TypeScript, Python
 - **Data:** MariaDB, PostgreSQL, Redis
 
 ---
